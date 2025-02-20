@@ -1,8 +1,5 @@
 <h1 align="center">
-  <br>
-    <img src="https://github.com/mpotthoff/vscode-android-webview-debug/raw/master/images/icon.png" alt="logo" width="200">
-  <br>
-  VS Code - Android WebView Debugging
+  VS Code - OpenHarmony WebView Debugging：Coming from mpotthoff vscode-android-webview-debug project
   <br>
   <br>
 </h1>
