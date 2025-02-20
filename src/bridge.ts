@@ -87,7 +87,7 @@ function resolvePath(from: string): string {
 
 function getAdbExecutable(): string {
     const adbPath = vscode.workspace
-        .getConfiguration("android-webview-debug")
+        .getConfiguration("openharmony-webview-debug")
         .get<string>("adbPath");
 
     if (adbPath) {
@@ -99,7 +99,7 @@ function getAdbExecutable(): string {
 
 function getAdbArguments(): string[] {
     const adbArgs = vscode.workspace
-        .getConfiguration("android-webview-debug")
+        .getConfiguration("openharmony-webview-debug")
         .get<string[]>("adbArgs");
 
     if (adbArgs) {
@@ -117,7 +117,7 @@ export async function test(): Promise<void> {
         });
     } catch (err: unknown) {
         if ((err as NodeJS.ErrnoException | undefined)?.code === "ENOENT") {
-            throw new Error("Failed to locate ADB executable.");
+            throw new Error("Failed to locate HDC executable.");
         }
 
         throw err;
