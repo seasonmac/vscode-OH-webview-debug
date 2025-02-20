@@ -23,7 +23,7 @@ import * as bridge from "./bridge";
 import { DebugConfigurationProvider } from "./debugConfigurationProvider";
 
 export function activate(context: vscode.ExtensionContext): void {
-    context.subscriptions.push(vscode.debug.registerDebugConfigurationProvider("android-webview", new DebugConfigurationProvider()));
+    context.subscriptions.push(vscode.debug.registerDebugConfigurationProvider("openharmony-webview", new DebugConfigurationProvider()));
     context.subscriptions.push(vscode.debug.onDidTerminateDebugSession(bridge.unforwardDebuggers));
 }
 
